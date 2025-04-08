@@ -1,6 +1,7 @@
 import { Date } from "../interfaces";
 import { ContainerCards } from "./ContainerCards";
 import { ContainerEmployees } from "./ContainerEmployees";
+import { employeesList } from "../assets";
 
 const dayWork: Date[] = [
   "Monday",
