@@ -37,7 +37,7 @@ body{
 .grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 0 2rem;
   width: 100%;
@@ -46,6 +46,7 @@ body{
   border: 2px solid #ffffff8c;
   border-radius: 5px;
   transition: all .3s linear;
+  height: 200px;
 }
 
 .layout-cards>p {
