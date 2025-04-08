@@ -8,8 +8,8 @@ const dayWork: Date[] = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday",
-  "Sunday",
+  // "Saturday",
+  // "Sunday",
 ];
 
 export const DragAndDrop = () => {
