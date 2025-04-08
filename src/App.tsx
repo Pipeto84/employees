@@ -1,12 +1,13 @@
-import { Title} from './components/Title'
+import { Title } from "./components/Title";
+import { DragAndDrop } from "./components/DragAndDrop";
 
 function App() {
-
   return (
-    <div className='container-main flex'>
-      <Title/>
+    <div className="container-main flex">
+      <Title />
+      <DragAndDrop />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
