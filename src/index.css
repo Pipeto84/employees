@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  font-family: 'Rubik Wet Paint','Montserrat', sans-serif;
+  font-weight: normal;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-main {
+  min-height: 85vh;
+}
+.title {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
