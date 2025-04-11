@@ -1,4 +1,4 @@
-import { Data, Date } from "../interfaces";
+import { Data } from "../interfaces";
 import { CardItem } from "./CardItem";
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
 
 export const ContainerEmployees = ({ items = [] }: Props) => {
   return (
-    <div className="layout-cards">
+    <div className="layout-cards containerEmployees">
       <p>Employees</p>
       <div className="all">
       {items.map(

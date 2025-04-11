@@ -26,4 +26,14 @@ export const employeesList: Data[]=[
     name: 'Sebastian',
     date: '',
   },
+  {
+    id: 6,
+    name: 'Marco',
+    date: '',
+  },
+  {
+    id: 7,
+    name: 'Rafael',
+    date: '',
+  },
 ]
