@@ -14,6 +14,10 @@ export const CardItem = ({ data, handleDragging }: Props) => {
 
   const handleDragEnd = () => handleDragging(false);
 
+  const handleOnClick = ()=>{
+    data.date=""
+  }
+
   return (
     <div
       className="card-container"
@@ -22,6 +26,7 @@ export const CardItem = ({ data, handleDragging }: Props) => {
       onDragStart={handleDragStart}
     >
       <p>{data.name}</p>
+      <button className="cancel" onClick={handleOnClick}>X</button>
     </div>
   );
 };
