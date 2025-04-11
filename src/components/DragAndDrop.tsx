@@ -2,6 +2,7 @@ import { Date } from "../interfaces";
 import { ContainerCards } from "./ContainerCards";
 import { ContainerEmployees } from "./ContainerEmployees";
 import { employeesList } from "../assets";
+import { useDragAndDrop } from "../hooks/useDragAndDrop";
 
 const dayWork: Date[] = [
   "Monday",
@@ -14,14 +15,23 @@ const dayWork: Date[] = [
 ];
 
 export const DragAndDrop = () => {
+  const { isDragging, listItems, handleDragging, handleUpdateList } =
+    useDragAndDrop(employeesList);
   return (
     <>
       <div className="employees">
-        <ContainerEmployees items={employeesList}/>
+        <ContainerEmployees items={listItems} hanleDragging={handleDragging}/>
       </div>
       <div className="grid">
         {dayWork.map((container) => (
-          <ContainerCards date={container} key={container} items={employeesList}/>
+          <ContainerCards
+            date={container}
+            key={container}
+            items={listItems}
+            isDragging={isDragging}
+            handleDragging={handleDragging}
+            handleUpdateList={handleUpdateList}
+          />
         ))}
       </div>
     </>
