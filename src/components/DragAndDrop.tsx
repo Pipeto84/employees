@@ -21,7 +21,7 @@ export const DragAndDrop = () => {
       </div>
       <div className="grid">
         {dayWork.map((container) => (
-          <ContainerCards date={container} key={container} />
+          <ContainerCards date={container} key={container} items={employeesList}/>
         ))}
       </div>
     </>

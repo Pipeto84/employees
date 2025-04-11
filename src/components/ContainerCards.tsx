@@ -1,13 +1,19 @@
-import { Date } from '../interfaces'
+import { Date, Data } from "../interfaces";
+import { CardItem } from "./CardItem";
 
 interface Props {
-  date: Date
+  date: Date;
+  items: Data[];
 }
 
-export const ContainerCards = ({date}: Props) => {
-  return(
-    <div className='layout-cards'>
+export const ContainerCards = ({ items = [], date }: Props) => {
+  return (
+    <div className="layout-cards">
       <p>{date}</p>
+      {items.map((item) => (
+        date===item.date &&
+        <CardItem data={item} key={item.id} />
+      ))}
     </div>
-  )
-}
+  );
+};
