@@ -41,6 +41,7 @@ export const ContainerCards = ({
               data={item}
               key={item.id}
               handleDragging={handleDragging}
+              handleUpdateList={handleUpdateList}
             />
           )
       )}

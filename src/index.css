@@ -89,7 +89,7 @@ body {
 .cancel {
   height: 25px;
   width: 25px;
-  background-color: rgb(252, 109, 109);
+  background-color: rgb(109, 176, 252);
   border-radius: 5px;
   border: black solid 1px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
