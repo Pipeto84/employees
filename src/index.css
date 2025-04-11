@@ -35,6 +35,11 @@ body {
 .all {
   display: grid;
   grid-template-columns: repeat(3,1fr);
+  text-align: center;
+  justify-items: center;
+  /* display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; */
 }
 .grid {
   display: flex;
@@ -46,14 +51,14 @@ body {
 }
 .layout-cards {
   background-color: rgb(216, 212, 212);
-  border: 2px solid #ffffff8c;
+  border: .125rem solid #ffffff8c;
   border-radius: 5px;
   transition: all 0.3s linear;
-  height: 240px;
-  width: 200px;
+  height: 15rem;
+  width: 12.5rem;
 }
 .layout-cards > p {
-  border-radius: 5px;
+  border-radius: .3125rem;
   background-color: black;
   text-align: center;
   padding: 1rem 0;
@@ -63,10 +68,10 @@ body {
 }
 .layout-dragging {
   background-color: rgb(216, 212, 212);
-  border: 2px dashed #0202028c;
+  border: .125rem dashed #0202028c;
 }
 .containerEmployees{
-  height: 300px;
+  height: 18.75rem;
   width: 100%;
 }
 .containerEmployees > p {
@@ -77,23 +82,23 @@ body {
   justify-content: space-between;
   margin: 1rem 1rem 0 1rem;
   background-color: rgb(81, 81, 83);
-  border-radius: 5px;
+  border-radius: .3125rem;
   padding: .5rem;
   cursor: pointer;
   animation: fadeIn 0.3s ease-in-out;
   width: 10rem;
-  box-shadow: 0 2px 4px rgb(3, 3, 3);
+  box-shadow: 0 .125rem .25rem rgb(3, 3, 3);
 }
 .card-container > p {
   font-weight: bold;
   font-size: 1rem;
 }
 .cancel {
-  height: 25px;
-  width: 25px;
+  height: 1.5625rem;
+  width: 1.5625rem;
   background-color: rgb(197, 197, 197);
-  border-radius: 5px;
-  border: black solid 1px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+  border-radius: .3125rem;
+  border: black solid .0625rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .4);
   cursor: pointer;
 }
