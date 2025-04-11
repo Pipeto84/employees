@@ -21,9 +21,9 @@ body {
 }
 .title {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 600;
 }
 .employees {
   display: grid;
@@ -37,9 +37,6 @@ body {
   grid-template-columns: repeat(3,1fr);
 }
 .grid {
-  /* flex: 1;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -52,7 +49,7 @@ body {
   border: 2px solid #ffffff8c;
   border-radius: 5px;
   transition: all 0.3s linear;
-  height: 200px;
+  height: 240px;
   width: 200px;
 }
 .layout-cards > p {
@@ -62,6 +59,7 @@ body {
   padding: 1rem 0;
   font-weight: bold;
   text-transform: capitalize;
+  font-size: 1rem;
 }
 .layout-dragging {
   background-color: rgb(216, 212, 212);
@@ -70,6 +68,9 @@ body {
 .containerEmployees{
   height: 300px;
   width: 100%;
+}
+.containerEmployees > p {
+  font-size: 1.5rem;
 }
 .card-container {
   display: flex;
@@ -90,8 +91,9 @@ body {
 .cancel {
   height: 25px;
   width: 25px;
-  background-color: rgba(109, 176, 252, 0.651);
+  background-color: rgb(197, 197, 197);
   border-radius: 5px;
   border: black solid 1px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+  cursor: pointer;
 }
