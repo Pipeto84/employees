@@ -1,5 +1,8 @@
-.container-main {
-  min-height: 85vh;
+.title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 .flex {
   display: flex;

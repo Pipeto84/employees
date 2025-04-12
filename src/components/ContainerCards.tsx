@@ -1,6 +1,7 @@
 import React from "react";
 import { Date, Data } from "../interfaces";
 import { CardItem } from "./CardItem";
+import "../styles/ContainerCards.css"
 
 interface Props {
   date: Date;

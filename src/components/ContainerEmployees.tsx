@@ -1,5 +1,6 @@
 import { Data, Date } from "../interfaces";
 import { CardItem } from "./CardItem";
+import "../styles/ContainerEmployees.css"
 
 interface Props {
   items: Data[];
@@ -13,7 +14,7 @@ export const ContainerEmployees = ({
   hanleUpdateList,
 }: Props) => {
   return (
-    <div className="layout-cards containerEmployees">
+    <div className="containerEmployees">
       <p>Employees</p>
       <div className="all">
         {items.map(

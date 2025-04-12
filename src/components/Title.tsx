@@ -1,3 +1,5 @@
+import "../styles/Title.css"
+
 export const Title = () => {
   return (
     <div className="title flex">
