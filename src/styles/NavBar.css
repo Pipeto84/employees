@@ -4,6 +4,8 @@
   width: 100vw;
   display: flex;
   justify-content: space-evenly;
+  position: sticky;
+  top: 0;
 }
 .topnav > a {
   float: left;
