@@ -3,6 +3,7 @@ import { ContainerCards } from "./ContainerCards";
 import { ContainerEmployees } from "./ContainerEmployees";
 import { employeesList } from "../assets";
 import { useDragAndDrop } from "../hooks/useDragAndDrop";
+import "../styles/DragAndDrop.css";
 
 const dayWork: Date[] = [
   "Monday",
@@ -19,8 +20,15 @@ export const DragAndDrop = () => {
     useDragAndDrop(employeesList);
   return (
     <>
+      <div className="titleSheduling flex">
+        <h1>Scheduling Employees</h1>
+      </div>
       <div className="employees">
-        <ContainerEmployees items={listItems} hanleDragging={handleDragging}/>
+        <ContainerEmployees
+          items={listItems}
+          hanleDragging={handleDragging}
+          hanleUpdateList={handleUpdateList}
+        />
       </div>
       <div className="grid">
         {dayWork.map((container) => (

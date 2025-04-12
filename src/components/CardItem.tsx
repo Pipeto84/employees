@@ -1,5 +1,6 @@
 import React from "react";
 import { Data, Date } from "../interfaces";
+import "../styles/CardItem.css";
 
 interface Props {
   data: Data;
@@ -7,7 +8,7 @@ interface Props {
   handleUpdateList: (id: number, date: Date) => void;
 }
 
-export const CardItem = ({ data, handleDragging,handleUpdateList }: Props) => {
+export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.dataTransfer.setData("text", `${data.id}`);
     handleDragging(true);
@@ -16,7 +17,7 @@ export const CardItem = ({ data, handleDragging,handleUpdateList }: Props) => {
   const handleDragEnd = () => handleDragging(false);
 
   const handleOnClick = () => {
-    handleUpdateList(data.id, "")
+    handleUpdateList(data.id, "");
   };
 
   return (

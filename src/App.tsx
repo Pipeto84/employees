@@ -1,11 +1,15 @@
-import { Title } from "./components/Title";
-import { DragAndDrop } from "./components/DragAndDrop";
+import { NavBar } from "./components/NavBar";
+import { Routes, Route } from "react-router-dom";
+import { Scheduling } from "./pages/Scheduling";
+import "./styles/App.css"
 
 function App() {
   return (
     <div className="container-main flex">
-      <Title />
-      <DragAndDrop />
+      <NavBar />
+      <Routes>
+        <Route path="/scheduling" element={<Scheduling />} />
+      </Routes>
     </div>
   );
 }
