@@ -84,7 +84,7 @@ body {
   cursor: pointer;
   animation: fadeIn 0.3s ease-in-out;
   width: 10rem;
-  box-shadow: 0 0.125rem 0.25rem rgb(3, 3, 3);
+  box-shadow: 0 0.125rem 0.25rem rgba(3, 3, 3, 0.4);
 }
 .card-container > p {
   font-weight: bold;
@@ -96,6 +96,6 @@ body {
   background-color: rgb(197, 197, 197);
   border-radius: 0.3125rem;
   border: black solid 0.0625rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
