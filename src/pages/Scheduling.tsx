@@ -1,7 +1,5 @@
-import React from 'react'
+import { DragAndDrop } from "../components/DragAndDrop";
 
 export const Scheduling = () => {
-  return (
-    <div>Scheduling</div>
-  )
-}
+  return <DragAndDrop />;
+};

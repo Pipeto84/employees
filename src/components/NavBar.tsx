@@ -1,11 +1,18 @@
-import "../styles/NavBar.css"
+import "../styles/NavBar.css";
+import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <div className="topnav">
-      <a className="active" href="/scheduling">Scheduling</a>
-      <a className="active" href="/list">List</a>
-      <a className="active" href="/new">New</a>
+      <NavLink className="active" to="/scheduling">
+        Scheduling
+      </NavLink>
+      <NavLink className="active" to="/list">
+        List
+      </NavLink>
+      <NavLink className="active" to="/new">
+        New
+      </NavLink>
     </div>
-  )
-}
+  );
+};

@@ -1,6 +1,6 @@
 import { Data, Date } from "../interfaces";
 import { CardItem } from "./CardItem";
-import "../styles/ContainerEmployees.css"
+import "../styles/ContainerEmployees.css";
 
 interface Props {
   items: Data[];
