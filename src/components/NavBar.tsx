@@ -4,8 +4,11 @@ import { NavLink } from "react-router-dom";
 export const NavBar = () => {
   return (
     <div className="topnav">
+      <NavLink className="active" to="/">
+        Home
+      </NavLink>
       <NavLink className="active" to="/scheduling">
-        Scheduling
+        Schedule
       </NavLink>
       <NavLink className="active" to="/list">
         List
