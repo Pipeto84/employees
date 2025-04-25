@@ -11,8 +11,8 @@ const dayWork: Date[] = [
   "Wednesday",
   "Thursday",
   "Friday",
-  // "Saturday",
-  // "Sunday",
+  "Saturday",
+  "Sunday",
 ];
 
 export const DragAndDrop = () => {
@@ -21,7 +21,7 @@ export const DragAndDrop = () => {
   return (
     <>
       <div className="titleSheduling flex">
-        <h1>Scheduling Employees</h1>
+        <h1 className="titleFont">Scheduling Employees</h1>
       </div>
       <div className="employees">
         <ContainerEmployees
