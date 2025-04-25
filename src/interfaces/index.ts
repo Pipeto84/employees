@@ -12,4 +12,5 @@ export interface Data {
   id: number;
   name: string;
   date: Date;
+  edit: boolean;
 }
