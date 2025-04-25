@@ -20,3 +20,19 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
+@media screen and (max-width: 640px) {
+  .containerEmployees {
+    height: 300px;
+  }
+  .all {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .containerEmployees {
+    height: 500px;
+  }
+  .all {
+    grid-template-columns: 1fr;
+  }
+}
