@@ -1,13 +1,11 @@
 import "../styles/CardLIst.css";
 import { Data } from "../interfaces/index";
-import { useEdit } from "../hooks/useEdit";
 
 interface Props {
   data: Data;
 }
 
 export const CardLIst = ({ data }: Props) => {
-  const { handleEdit } = useEdit();
   const onClick = () => {
     data.edit = true;
   }

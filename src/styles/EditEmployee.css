@@ -3,8 +3,75 @@
   top: 30%;
   left: 30%;
   width: 400px;
-  height: 300px;
+  height: 210px;
   background-color: gray;
   border-radius: 20px;
-  box-shadow: 0 0 10px 5px rgba(3, 3, 3, 0.1);
+  box-shadow: 0 0 10px 5px rgba(3, 3, 3, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border: solid 2px black;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 30px; */
+}
+.label {
+  width: 250px;
+  height: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.inputId {
+  width: 250px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(243, 240, 240);
+  border: solid 1px black;
+  box-shadow: 0 0 5px ;
+  font-size: 1.2rem;
+}
+.inputName {
+  width: 250px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(243, 240, 240);
+  border: solid 1px black;
+  box-shadow: 0 0 5px ;
+  font-size: 1.2rem;
+}
+.buttons {
+  width: 250px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.saveButton {
+  width: 70px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: rgb(10, 177, 10);
+  border: 0;
+  box-shadow: 0 0 7px ;
+  cursor: pointer;
+  font-weight: 500;
+}
+.cancelButton {
+  width: 70px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: rgb(231, 38, 38);
+  border: 0;
+  box-shadow: 0 0 7px ;
+  cursor: pointer;
+  font-weight: 500;
 }
