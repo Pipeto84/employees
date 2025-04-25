@@ -7,9 +7,18 @@ type editing = {
 }
 
 export const EditEmployee = ({employee}: editing) => {
+
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
+  const clickSave = () => {
+    employee.edit=false
+  }
+
+  const clickCancel = () => {
+    employee.edit=false
+  }
   return (
     <div className="modal">
       <form className="form" onSubmit={handleSubmit}>
@@ -18,8 +27,8 @@ export const EditEmployee = ({employee}: editing) => {
         <label className="label">Name:</label>
         <input name="name" className="inputName" type="text" value={employee.name} />
         <div className="buttons">
-          <button className="saveButton">Save</button>
-          <button className="cancelButton">Cancel</button>
+          <button className="saveButton" onClick={clickSave}>Save</button>
+          <button className="cancelButton" onClick={clickCancel}>Cancel</button>
         </div>
       </form>
     </div>

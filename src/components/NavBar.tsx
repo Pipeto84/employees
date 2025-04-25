@@ -13,9 +13,9 @@ export const NavBar = () => {
       <NavLink className="active" to="/list">
         List
       </NavLink>
-      <NavLink className="active" to="/new">
+      {/* <NavLink className="active" to="/new">
         New
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 };
