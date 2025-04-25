@@ -9,6 +9,7 @@ export const CardLIst = ({ data }: Props) => {
   return (
     <div className="card-list">
       <p>{data.id + " - " + data.name + " ( " + data.date + " )"}</p>
+      <button className="edit">Edit</button>
     </div>
   );
 };
