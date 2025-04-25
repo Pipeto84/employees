@@ -10,14 +10,12 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  border: solid 2px black;
 }
 .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 30px; */
 }
 .label {
   width: 250px;
