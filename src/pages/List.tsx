@@ -5,7 +5,6 @@ import { useEdit } from "../hooks/useEdit";
 import { EditEmployee } from "../components/EditEmployee";
 
 export const List = () => {
-  const { edit } = useEdit();
 
   return (
     <div className="list">

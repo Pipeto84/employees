@@ -3,7 +3,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Scheduling } from "./pages/Scheduling";
 import { Home } from "./pages/Home";
 import { List } from "./pages/List";
-import { EditEmployee } from "./components/EditEmployee";
 import "./styles/App.css";
 
 function App() {
