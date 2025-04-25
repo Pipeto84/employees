@@ -2,6 +2,7 @@ import "../styles/List.css";
 import { CardLIst } from "../components/CardLIst";
 import { employeesList } from "../assets/index";
 import { useEdit } from "../hooks/useEdit";
+import { EditEmployee } from "../components/EditEmployee";
 
 export const List = () => {
   const { edit } = useEdit();
@@ -14,6 +15,7 @@ export const List = () => {
           <CardLIst data={item} key={item.id} />
         ))}
       </div>
+      <EditEmployee />
     </div>
   );
 };
