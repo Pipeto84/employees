@@ -1,9 +1,10 @@
 import { Date } from "../interfaces";
 import { ContainerCards } from "./ContainerCards";
 import { ContainerEmployees } from "./ContainerEmployees";
-import { employeesList } from "../assets";
 import { useDragAndDrop } from "../hooks/useDragAndDrop";
 import "../styles/DragAndDrop.css";
+import { useAppSelector } from "../app/hooks";
+import { useEffect } from "react";
 
 const dayWork: Date[] = [
   "Monday",
@@ -16,8 +17,13 @@ const dayWork: Date[] = [
 ];
 
 export const DragAndDrop = () => {
+  const employees = useAppSelector((state) => state.employees);
   const { isDragging, listItems, handleDragging, handleUpdateList } =
-    useDragAndDrop(employeesList);
+    useDragAndDrop(employees);
+    useEffect(() => {
+      
+    }, [employees])
+    
   return (
     <>
       <div className="titleSheduling flex">
