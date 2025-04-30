@@ -4,6 +4,7 @@ import { ContainerEmployees } from "./ContainerEmployees";
 import { useDragAndDrop } from "../hooks/useDragAndDrop";
 import "../styles/DragAndDrop.css";
 import { useAppSelector } from "../app/hooks";
+import { employeesList } from '../assets/index'
 import { useEffect } from "react";
 
 const dayWork: Date[] = [
@@ -19,7 +20,7 @@ const dayWork: Date[] = [
 export const DragAndDrop = () => {
   const employees = useAppSelector((state) => state.employees);
   const { isDragging, listItems, handleDragging, handleUpdateList } =
-    useDragAndDrop(employees);
+    useDragAndDrop(employeesList);
     useEffect(() => {
       
     }, [employees])

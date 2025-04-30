@@ -20,19 +20,21 @@ export const ContainerCards = ({
   handleDragging,
   handleUpdateList,
 }: Props) => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    dispatch(dragEmployee({
+    const updateEployee = {
       id: +e.dataTransfer.getData("text"),
       name: "",
       date: date,
-      edit: false
-    }))
+      edit: false,
+    };
+    handleUpdateList(updateEployee.id, updateEployee.date);
+    dispatch(dragEmployee(updateEployee));
     handleDragging(false);
   };
 
