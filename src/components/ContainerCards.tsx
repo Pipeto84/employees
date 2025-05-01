@@ -2,6 +2,8 @@ import React from "react";
 import { Date, Data } from "../interfaces";
 import { CardItem } from "./CardItem";
 import "../styles/ContainerCards.css";
+import { dragEmployee } from "../features/employees/employeSlice";
+import { useAppDispatch } from "../app/hooks";
 
 interface Props {
   date: Date;
@@ -18,13 +20,18 @@ export const ContainerCards = ({
   handleDragging,
   handleUpdateList,
 }: Props) => {
+  const dispatch = useAppDispatch();
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    handleUpdateList(+e.dataTransfer.getData("text"), date);
+    const updateEployee = {
+      id: +e.dataTransfer.getData("text"),
+      date: date,
+    };
+    dispatch(dragEmployee(updateEployee));
     handleDragging(false);
   };
 

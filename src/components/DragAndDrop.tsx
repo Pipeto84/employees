@@ -1,9 +1,9 @@
 import { Date } from "../interfaces";
 import { ContainerCards } from "./ContainerCards";
 import { ContainerEmployees } from "./ContainerEmployees";
-import { employeesList } from "../assets";
 import { useDragAndDrop } from "../hooks/useDragAndDrop";
 import "../styles/DragAndDrop.css";
+import { useAppSelector } from "../app/hooks";
 
 const dayWork: Date[] = [
   "Monday",
@@ -16,8 +16,9 @@ const dayWork: Date[] = [
 ];
 
 export const DragAndDrop = () => {
-  const { isDragging, listItems, handleDragging, handleUpdateList } =
-    useDragAndDrop(employeesList);
+  const employees = useAppSelector((state) => state.employees);
+  const { isDragging, handleDragging, handleUpdateList } = useDragAndDrop();
+
   return (
     <>
       <div className="titleSheduling flex">
@@ -25,7 +26,7 @@ export const DragAndDrop = () => {
       </div>
       <div className="employees">
         <ContainerEmployees
-          items={listItems}
+          items={employees}
           hanleDragging={handleDragging}
           hanleUpdateList={handleUpdateList}
         />
@@ -35,7 +36,7 @@ export const DragAndDrop = () => {
           <ContainerCards
             date={container}
             key={container}
-            items={listItems}
+            items={employees}
             isDragging={isDragging}
             handleDragging={handleDragging}
             handleUpdateList={handleUpdateList}
