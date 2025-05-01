@@ -5,8 +5,7 @@ import { dragEmployee } from "../features/employees/employeSlice";
 
 export const useDragAndDrop = () => {
   const [isDragging, setIsDragging] = useState(false);
-  const dispatch = useAppDispatch()
-;
+  const dispatch = useAppDispatch();
   const handleDragging = (dragging: boolean) => {
     setIsDragging(dragging);
   };
@@ -15,8 +14,8 @@ export const useDragAndDrop = () => {
     const update = {
       id,
       date,
-    }
-    dispatch(dragEmployee(update))
+    };
+    dispatch(dragEmployee(update));
   };
 
   return {

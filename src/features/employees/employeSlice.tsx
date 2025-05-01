@@ -5,52 +5,52 @@ import { Data, Date } from "../../interfaces/index";
 type idData = {
   id: number;
   date: Date;
-}
+};
 
-export const initialState: Data[]=[
+export const initialState: Data[] = [
   {
     id: 1,
-    name: 'Felipe',
-    date: '',
+    name: "Felipe",
+    date: "",
     edit: false,
   },
   {
     id: 2,
-    name: 'Juan',
-    date: '',
+    name: "Juan",
+    date: "",
     edit: false,
   },
   {
     id: 3,
-    name: 'Mauricio',
-    date: '',
+    name: "Mauricio",
+    date: "",
     edit: false,
   },
   {
     id: 4,
-    name: 'Jose',
-    date: '',
+    name: "Jose",
+    date: "",
     edit: false,
   },
   {
     id: 5,
-    name: 'Sebastian',
-    date: '',
+    name: "Sebastian",
+    date: "",
     edit: false,
   },
   {
     id: 6,
-    name: 'Marco',
-    date: '',
+    name: "Marco",
+    date: "",
     edit: false,
   },
   {
     id: 7,
-    name: 'Rafael',
-    date: '',
+    name: "Rafael",
+    date: "",
     edit: false,
   },
-]
+];
 
 export const employeeSlice = createSlice({
   name: "employees",

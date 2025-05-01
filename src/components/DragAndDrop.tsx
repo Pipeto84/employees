@@ -17,9 +17,8 @@ const dayWork: Date[] = [
 
 export const DragAndDrop = () => {
   const employees = useAppSelector((state) => state.employees);
-  const { isDragging, handleDragging, handleUpdateList } =
-    useDragAndDrop();
-    
+  const { isDragging, handleDragging, handleUpdateList } = useDragAndDrop();
+
   return (
     <>
       <div className="titleSheduling flex">
