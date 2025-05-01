@@ -29,9 +29,7 @@ export const ContainerCards = ({
     e.preventDefault();
     const updateEployee = {
       id: +e.dataTransfer.getData("text"),
-      // name: "",
       date: date,
-      // edit: false,
     };
     dispatch(dragEmployee(updateEployee));
     handleDragging(false);
