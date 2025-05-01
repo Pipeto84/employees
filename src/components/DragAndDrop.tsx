@@ -21,9 +21,6 @@ export const DragAndDrop = () => {
   const employees = useAppSelector((state) => state.employees);
   const { isDragging, listItems, handleDragging, handleUpdateList } =
     useDragAndDrop(employeesList);
-    useEffect(() => {
-      
-    }, [employees])
     
   return (
     <>
@@ -32,7 +29,7 @@ export const DragAndDrop = () => {
       </div>
       <div className="employees">
         <ContainerEmployees
-          items={listItems}
+          items={employees}
           hanleDragging={handleDragging}
           hanleUpdateList={handleUpdateList}
         />
@@ -42,7 +39,7 @@ export const DragAndDrop = () => {
           <ContainerCards
             date={container}
             key={container}
-            items={listItems}
+            items={employees}
             isDragging={isDragging}
             handleDragging={handleDragging}
             handleUpdateList={handleUpdateList}
