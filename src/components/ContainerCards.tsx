@@ -33,7 +33,6 @@ export const ContainerCards = ({
       date: date,
       edit: false,
     };
-    // handleUpdateList(updateEployee.id, updateEployee.date);
     dispatch(dragEmployee(updateEployee));
     handleDragging(false);
   };

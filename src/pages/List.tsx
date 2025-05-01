@@ -1,10 +1,12 @@
 import "../styles/List.css";
 import { CardLIst } from "../components/CardLIst";
-import { employeesList } from "../assets/index";
 import { EditEmployee } from "../components/EditEmployee";
+import {useAppSelector} from '../app/hooks'
 
 export const List = () => {
   
+  const employeesList= useAppSelector(state=>state.employees)
+
   return (
     <div className="list">
       <p>Employees List</p>

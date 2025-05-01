@@ -17,7 +17,7 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
   const handleDragEnd = () => handleDragging(false);
 
   const handleOnClick = () => {
-    // handleUpdateList(data.id, "");
+    handleUpdateList(data.id, "");
   };
 
   return (
