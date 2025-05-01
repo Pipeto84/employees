@@ -14,9 +14,7 @@ export const useDragAndDrop = () => {
   const handleUpdateList = (id: number, date: Date) => {
     const update = {
       id,
-      name: "",
       date,
-      edit: false,
     }
     dispatch(dragEmployee(update))
   };
