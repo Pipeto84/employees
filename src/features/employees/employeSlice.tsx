@@ -1,6 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { Data } from "../../interfaces/index";
+import { Data, Date } from "../../interfaces/index";
+
+type idData = {
+  id: number;
+  date: Date;
+}
 
 export const initialState: Data[]=[
   {
@@ -51,7 +56,7 @@ export const employeeSlice = createSlice({
   name: "employees",
   initialState,
   reducers: {
-    dragEmployee: (state, action: PayloadAction<Data>) => {
+    dragEmployee: (state, action: PayloadAction<idData>) => {
       const { id, date } = action.payload;
       const employeeFound = state.find((employee) => employee.id === id);
       if (employeeFound) {
