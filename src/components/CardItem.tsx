@@ -5,7 +5,7 @@ import "../styles/CardItem.css";
 interface Props {
   data: Data;
   handleDragging: (dragging: boolean) => void;
-  handleUpdateList: (id: number, date: Date) => void;
+  handleUpdateList: (id: string, date: Date) => void;
 }
 
 export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {

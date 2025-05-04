@@ -10,6 +10,7 @@ export type Date =
 
 export interface Data {
   id: string;
+  alias: string;
   name: string;
   date: Date;
 }

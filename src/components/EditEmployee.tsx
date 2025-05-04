@@ -13,17 +13,18 @@ export const EditEmployee = () => {
 
   const [employee, setEmployee] = useState<Data>({
     id: "",
+    alias: "",
     name: "",
     date: "",
   });
   const [canceled, setCanceled] = useState(false);
 
-  // const handleChangeId = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setEmployee({
-  //     ...employee,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
+  const handleChangeAlias = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmployee({
+      ...employee,
+      [e.target.name]: e.target.value,
+    });
+  };
   const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmployee({
       ...employee,
@@ -59,14 +60,14 @@ export const EditEmployee = () => {
   return (
     <div className="modal">
       <form className="form" onSubmit={handleSubmit}>
-        <label className="label">Id:</label>
-        {/* <input
-          name="id"
+        <label className="label">Alias:</label>
+        <input
+          name="alias"
           className="inputId"
           type="text"
-          value={employee.id}
-          onChange={handleChangeId}
-        /> */}
+          value={employee.alias}
+          onChange={handleChangeAlias}
+        />
         <label className="label">Name:</label>
         <input
           name="name"

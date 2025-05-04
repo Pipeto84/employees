@@ -10,7 +10,7 @@ interface Props {
   items: Data[];
   isDragging: boolean;
   handleDragging: (dragging: boolean) => void;
-  handleUpdateList: (id: number, date: Date) => void;
+  handleUpdateList: (id: string, date: Date) => void;
 }
 
 export const ContainerCards = ({
