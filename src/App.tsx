@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import { Scheduling } from "./pages/Scheduling";
 import { Home } from "./pages/Home";
 import { List } from "./pages/List";
+import {Edit} from './pages/Edit'
 import "./styles/App.css";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/scheduling" element={<Scheduling />} />
           <Route path="/list" element={<List />} />
+          <Route path="/edit/:id" element={<Edit />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

@@ -28,7 +28,7 @@ export const ContainerCards = ({
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     const updateEployee = {
-      id: +e.dataTransfer.getData("text"),
+      id: e.dataTransfer.getData("text"),
       date: date,
     };
     dispatch(dragEmployee(updateEployee));

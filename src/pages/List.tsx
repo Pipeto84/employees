@@ -15,13 +15,6 @@ export const List = () => {
           <CardLIst data={item} key={item.id} />
         ))}
       </div>
-      {
-        employeesList.map(item=>(
-          item.edit && (
-          <EditEmployee employee={item} key={item.id}/>
-          )
-        ))
-      }
     </div>
   );
 };

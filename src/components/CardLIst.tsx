@@ -1,21 +1,19 @@
 import "../styles/CardLIst.css";
 import { Data } from "../interfaces/index";
+import {Link} from 'react-router-dom'
 
 interface Props {
   data: Data;
 }
 
 export const CardLIst = ({ data }: Props) => {
-  const onClick = () => {
-    data.edit = true;
-  }
 
   return (
     <div className="card-list">
       <p>{data.id + " - " + data.name + " ( " + data.date + " )"}</p>
-      <button className="edit" onClick={onClick}>
+      <Link className="edit" to={`/edit/${data.id}`}>
         Edit
-      </button>
+      </Link>
     </div>
   );
 };

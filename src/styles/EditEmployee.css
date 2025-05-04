@@ -1,7 +1,10 @@
+.titleEdit {
+  color: gray;
+}
 .modal {
-  position: fixed;
+  /* position: fixed;
   top: 30%;
-  left: 30%;
+  left: 30%; */
   width: 400px;
   height: 210px;
   background-color: gray;
