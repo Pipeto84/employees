@@ -1,15 +1,18 @@
 .titleEdit {
-  color: gray;
+  color: rgb(204, 200, 200);
+  text-align: center;
+  margin-top: 1.5625rem;
+  margin-bottom: 1rem;
 }
 .modal {
   /* position: fixed;
   top: 30%;
   left: 30%; */
-  width: 400px;
-  height: 210px;
+  width: 25rem;
+  height: 13.125rem;
   background-color: gray;
-  border-radius: 20px;
-  box-shadow: 0 0 10px 5px rgba(3, 3, 3, 0.2);
+  border-radius: 1.25rem;
+  box-shadow: 0 0 .625rem .3125rem rgba(3, 3, 3, 0.2);
   display: flex;
   justify-content: center;
   align-items: start;
@@ -21,58 +24,58 @@
   align-items: center;
 }
 .label {
-  width: 250px;
-  height: 20px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  width: 15.625rem;
+  height: 1.25rem;
+  margin-top: .9375rem;
+  margin-bottom: .3125rem;
   font-weight: 600;
 }
 .inputId {
-  width: 250px;
-  height: 30px;
-  padding: 10px;
-  border-radius: 8px;
+  width: 15.625rem;
+  height: 1.875rem;
+  padding: .625rem;
+  border-radius: .5rem;
   background-color: rgb(243, 240, 240);
-  border: solid 1px black;
-  box-shadow: 0 0 5px ;
+  border: solid .0625rem black;
+  box-shadow: 0 0 .3125rem ;
   font-size: 1.2rem;
 }
 .inputName {
-  width: 250px;
-  height: 30px;
-  padding: 10px;
-  border-radius: 8px;
+  width: 15.625rem;
+  height: 1.875rem;
+  padding: .625rem;
+  border-radius: .5rem;
   background-color: rgb(243, 240, 240);
-  border: solid 1px black;
-  box-shadow: 0 0 5px ;
+  border: solid .0625rem black;
+  box-shadow: 0 0 .3125rem ;
   font-size: 1.2rem;
 }
 .buttons {
-  width: 250px;
-  height: 70px;
+  width: 15.625rem;
+  height: 4.375rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .saveButton {
-  width: 70px;
-  height: 30px;
-  font-size: 18px;
-  border-radius: 8px;
+  width: 4.375rem;
+  height: 1.875rem;
+  font-size: 1.125rem;
+  border-radius: .5rem;
   background-color: rgb(94, 91, 255);
   border: 0;
-  box-shadow: 0 0 7px ;
+  box-shadow: 0 0 .4375rem ;
   cursor: pointer;
   font-weight: 500;
 }
 .cancelButton {
-  width: 70px;
-  height: 30px;
-  font-size: 18px;
-  border-radius: 8px;
+  width: 4.375rem;
+  height: 1.875rem;
+  font-size: 1.125rem;
+  border-radius: .5rem;
   background-color: rgb(231, 38, 38);
   border: 0;
-  box-shadow: 0 0 7px ;
+  box-shadow: 0 0 .4375rem ;
   cursor: pointer;
   font-weight: 500;
 }
