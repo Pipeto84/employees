@@ -10,7 +10,7 @@ export const CardLIst = ({ data }: Props) => {
 
   return (
     <div className="card-list">
-      <p>{data.id + " - " + data.name + " ( " + data.date + " )"}</p>
+      <p>{data.alias + " - " + data.name + " ( " + data.date + " )"}</p>
       <Link className="edit" to={`/edit/${data.id}`}>
         Edit
       </Link>

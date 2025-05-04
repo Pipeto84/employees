@@ -67,6 +67,7 @@ export const EditEmployee = () => {
           type="text"
           value={employee.alias}
           onChange={handleChangeAlias}
+          autoComplete="off"
         />
         <label className="label">Name:</label>
         <input
@@ -75,6 +76,7 @@ export const EditEmployee = () => {
           type="text"
           value={employee.name}
           onChange={handleChangeName}
+          autoComplete="off"
         />
         <div className="buttons">
           <button className="saveButton" onClick={handleSave}>

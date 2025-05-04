@@ -27,7 +27,7 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
       onDragEnd={handleDragEnd}
       onDragStart={handleDragStart}
     >
-      <p>{data.name}</p>
+      <p>{data.alias}</p>
       <button className="cancel" onClick={handleOnClick}>
         X
       </button>

@@ -64,10 +64,11 @@ export const employeeSlice = createSlice({
       }
     },
     editingEmployee: (state, action: PayloadAction<Data>) => {
-      const { id, name } = action.payload;
+      const { id, alias, name } = action.payload;
       const employeeFound = state.find((employee) => employee.id === id);
       if (employeeFound) {
         employeeFound.id = id;
+        employeeFound.alias = alias;
         employeeFound.name = name;
       }
     },
