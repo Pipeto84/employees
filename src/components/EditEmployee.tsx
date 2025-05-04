@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "../styles/EditEmployee.css";
 import { Data } from "../interfaces/index";
-import { useAppSelector } from "../app/hooks";
-import {useParams} from 'react-router-dom'
+import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { useParams, useNavigate } from "react-router-dom";
+import { editingEmployee } from "../features/employees/employeSlice";
 
 export const EditEmployee = () => {
   const employees = useAppSelector((state) => state.employees);
-  const params = useParams()
+  const dispatch = useAppDispatch();
+  const params = useParams();
+  const navigate = useNavigate();
 
   const [employee, setEmployee] = useState<Data>({
     id: "",
     name: "",
     date: "",
   });
+  const [canceled, setCanceled] = useState(false);
 
-  const handleChangeId = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmployee({
-      ...employee,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChangeId = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setEmployee({
+  //     ...employee,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
   const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmployee({
       ...employee,
@@ -29,28 +33,40 @@ export const EditEmployee = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (params.id) {
+      if (!canceled) {
+        dispatch(editingEmployee(employee));
+      }
+    }
+    navigate("/list");
+  };
+  const handleCancel = () => {
+    setCanceled(true);
+  };
+  const handleSave = () => {
+    setCanceled(false);
   };
 
   useEffect(() => {
-    if(params.id){
-      const employeeFound = employees.find(item=>item.id === params.id);
-      if(employeeFound){
-        setEmployee(employeeFound)
+    if (params.id) {
+      const employeeFound = employees.find((item) => item.id === params.id);
+      if (employeeFound) {
+        setEmployee(employeeFound);
       }
     }
-  }, [params.id, employees])
-  
+  }, [params.id, employees]);
+
   return (
     <div className="modal">
       <form className="form" onSubmit={handleSubmit}>
         <label className="label">Id:</label>
-        <input
+        {/* <input
           name="id"
           className="inputId"
           type="text"
           value={employee.id}
           onChange={handleChangeId}
-        />
+        /> */}
         <label className="label">Name:</label>
         <input
           name="name"
@@ -60,8 +76,12 @@ export const EditEmployee = () => {
           onChange={handleChangeName}
         />
         <div className="buttons">
-          <button className="saveButton">Save</button>
-          <button className="cancelButton">Cancel</button>
+          <button className="saveButton" onClick={handleSave}>
+            Save
+          </button>
+          <button className="cancelButton" onClick={handleCancel}>
+            Cancel
+          </button>
         </div>
       </form>
     </div>

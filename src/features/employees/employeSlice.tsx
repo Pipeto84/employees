@@ -4,6 +4,7 @@ import { Data, Date } from "../../interfaces/index";
 
 type idData = {
   id: string;
+  name: string;
   date: Date;
 };
 
@@ -56,10 +57,18 @@ export const employeeSlice = createSlice({
         employeeFound.date = date;
       }
     },
+    editingEmployee: (state, action: PayloadAction<idData>) => {
+      const { id, name } = action.payload;
+      const employeeFound = state.find((employee) => employee.id === id);
+      if (employeeFound) {
+        employeeFound.id = id;
+        employeeFound.name = name;
+      }
+    },
   },
 });
 
-export const { dragEmployee } = employeeSlice.actions;
+export const { dragEmployee, editingEmployee } = employeeSlice.actions;
 
 export const selectEmployee = (state: RootState) => state.employees;
 
