@@ -1,5 +1,5 @@
 import {FormEmployee} from '../components/FormEmployee'
-import '../styles/EditEmployee.css'
+import '../styles/FormEmployee.css'
 
 export const Edit = () => {
   return (
