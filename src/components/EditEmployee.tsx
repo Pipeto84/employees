@@ -71,7 +71,7 @@ export const EditEmployee = () => {
         <label className="label">Alias:</label>
         <input
           name="alias"
-          className="inputId"
+          className="inputText"
           type="text"
           value={employee.alias}
           onChange={handleChangeAlias}
@@ -82,7 +82,7 @@ export const EditEmployee = () => {
         <label className="label">Name:</label>
         <input
           name="name"
-          className="inputName"
+          className="inputText"
           type="text"
           value={employee.name}
           onChange={handleChangeName}
@@ -90,7 +90,11 @@ export const EditEmployee = () => {
           placeholder="Insert name..."
         />
         <div className="buttons">
-          <button className="saveButton" onClick={handleSave}>
+          <button
+            className="saveButton"
+            onClick={handleSave}
+            disabled={employee.alias.length < 1 || employee.name.length < 1}
+          >
             Save
           </button>
           <button className="cancelButton" onClick={handleCancel}>

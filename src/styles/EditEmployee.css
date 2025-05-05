@@ -27,17 +27,7 @@
   margin-bottom: .3125rem;
   font-weight: 600;
 }
-.inputId {
-  width: 15.625rem;
-  height: 1.875rem;
-  padding: .625rem;
-  border-radius: .5rem;
-  background-color: rgb(243, 240, 240);
-  border: solid .0625rem black;
-  box-shadow: 0 0 .3125rem ;
-  font-size: 1.2rem;
-}
-.inputName {
+.inputText {
   width: 15.625rem;
   height: 1.875rem;
   padding: .625rem;
@@ -59,11 +49,14 @@
   height: 1.875rem;
   font-size: 1.125rem;
   border-radius: .5rem;
-  background-color: rgb(94, 91, 255);
+  background-color: rgb(181, 91, 255);
   border: 0;
   box-shadow: 0 0 .4375rem ;
   cursor: pointer;
   font-weight: 500;
+}
+.saveButton:disabled{
+  cursor: not-allowed;
 }
 .cancelButton {
   width: 4.375rem;
