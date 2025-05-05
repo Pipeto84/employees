@@ -3,7 +3,7 @@
   border: 0.125rem solid #ffffff8c;
   border-radius: 5px;
   transition: all 0.3s linear;
-  height: 15.5rem;
+  height: auto;
   width: 100%;
 }
 .containerEmployees > p {
@@ -19,6 +19,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  padding-bottom: 1rem;
 }
 @media screen and (max-width: 640px) {
   .containerEmployees {

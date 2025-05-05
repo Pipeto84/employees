@@ -4,7 +4,6 @@ import { useAppSelector } from "../app/hooks";
 
 export const List = () => {
   const employeesList = useAppSelector((state) => state.employees);
-
   return (
     <div className="list">
       <p>Employees List</p>

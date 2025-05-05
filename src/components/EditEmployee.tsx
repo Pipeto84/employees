@@ -3,7 +3,11 @@ import "../styles/EditEmployee.css";
 import { Data } from "../interfaces/index";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { useParams, useNavigate } from "react-router-dom";
-import { editingEmployee } from "../features/employees/employeSlice";
+import {
+  addEmployee,
+  editingEmployee,
+} from "../features/employees/employeSlice";
+import { v4 as uuid } from "uuid";
 
 export const EditEmployee = () => {
   const employees = useAppSelector((state) => state.employees);
@@ -38,6 +42,10 @@ export const EditEmployee = () => {
       if (!canceled) {
         dispatch(editingEmployee(employee));
       }
+    } else if (employee.alias.length > 0 && employee.name.length > 0) {
+      if (!canceled) {
+        dispatch(addEmployee({ ...employee, id: uuid() }));
+      }
     }
     navigate("/list");
   };
@@ -68,6 +76,8 @@ export const EditEmployee = () => {
           value={employee.alias}
           onChange={handleChangeAlias}
           autoComplete="off"
+          autoFocus
+          placeholder="Insert alias..."
         />
         <label className="label">Name:</label>
         <input
@@ -77,6 +87,7 @@ export const EditEmployee = () => {
           value={employee.name}
           onChange={handleChangeName}
           autoComplete="off"
+          placeholder="Insert name..."
         />
         <div className="buttons">
           <button className="saveButton" onClick={handleSave}>

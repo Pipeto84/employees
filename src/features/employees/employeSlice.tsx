@@ -72,10 +72,13 @@ export const employeeSlice = createSlice({
         employeeFound.name = name;
       }
     },
+    addEmployee: (state, action: PayloadAction<Data>)=>{
+      state.push(action.payload)
+    }
   },
 });
 
-export const { dragEmployee, editingEmployee } = employeeSlice.actions;
+export const { dragEmployee, editingEmployee, addEmployee } = employeeSlice.actions;
 
 export const selectEmployee = (state: RootState) => state.employees;
 
