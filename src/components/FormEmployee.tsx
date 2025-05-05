@@ -9,7 +9,7 @@ import {
 } from "../features/employees/employeSlice";
 import { v4 as uuid } from "uuid";
 
-export const EditEmployee = () => {
+export const FormEmployee = () => {
   const employees = useAppSelector((state) => state.employees);
   const dispatch = useAppDispatch();
   const params = useParams();
