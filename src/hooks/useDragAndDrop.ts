@@ -10,7 +10,7 @@ export const useDragAndDrop = () => {
     setIsDragging(dragging);
   };
 
-  const handleUpdateList = (id: number, date: Date) => {
+  const handleUpdateList = (id: string, date: Date) => {
     const update = {
       id,
       date,

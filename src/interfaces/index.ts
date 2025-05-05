@@ -9,8 +9,8 @@ export type Date =
   | "";
 
 export interface Data {
-  id: number;
+  id: string;
+  alias: string;
   name: string;
   date: Date;
-  edit: boolean;
 }

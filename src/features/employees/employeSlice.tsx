@@ -3,52 +3,52 @@ import { RootState } from "../../app/store";
 import { Data, Date } from "../../interfaces/index";
 
 type idData = {
-  id: number;
+  id: string;
   date: Date;
 };
 
 export const initialState: Data[] = [
   {
-    id: 1,
+    id: "1",
+    alias: "Pipe",
     name: "Felipe",
     date: "",
-    edit: false,
   },
   {
-    id: 2,
+    id: "2",
+    alias: "Juancho",
     name: "Juan",
     date: "",
-    edit: false,
   },
   {
-    id: 3,
+    id: "3",
+    alias: "Mauro",
     name: "Mauricio",
     date: "",
-    edit: false,
   },
   {
-    id: 4,
+    id: "4",
+    alias: "Jose",
     name: "Jose",
     date: "",
-    edit: false,
   },
   {
-    id: 5,
+    id: "5",
+    alias: "Sebas",
     name: "Sebastian",
     date: "",
-    edit: false,
   },
   {
-    id: 6,
+    id: "6",
+    alias: "Marco",
     name: "Marco",
     date: "",
-    edit: false,
   },
   {
-    id: 7,
+    id: "7",
+    alias: "Rafa",
     name: "Rafael",
     date: "",
-    edit: false,
   },
 ];
 
@@ -63,10 +63,31 @@ export const employeeSlice = createSlice({
         employeeFound.date = date;
       }
     },
+    editingEmployee: (state, action: PayloadAction<Data>) => {
+      const { id, alias, name } = action.payload;
+      const employeeFound = state.find((employee) => employee.id === id);
+      if (employeeFound) {
+        employeeFound.id = id;
+        employeeFound.alias = alias;
+        employeeFound.name = name;
+      }
+    },
+    addEmployee: (state, action: PayloadAction<Data>) => {
+      state.push(action.payload);
+    },
+    deleteEmployee: (state, action: PayloadAction<Data>) => {
+      const employeeFound = state.find(
+        (employee) => employee.id === action.payload.id
+      );
+      if (employeeFound) {
+        state.splice(state.indexOf(employeeFound), 1);
+      }
+    },
   },
 });
 
-export const { dragEmployee } = employeeSlice.actions;
+export const { dragEmployee, editingEmployee, addEmployee, deleteEmployee } =
+  employeeSlice.actions;
 
 export const selectEmployee = (state: RootState) => state.employees;
 

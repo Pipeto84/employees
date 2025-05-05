@@ -5,7 +5,7 @@ import "../styles/ContainerEmployees.css";
 interface Props {
   items: Data[];
   hanleDragging: (dragging: boolean) => void;
-  hanleUpdateList: (id: number, date: Date) => void;
+  hanleUpdateList: (id: string, date: Date) => void;
 }
 
 export const ContainerEmployees = ({
