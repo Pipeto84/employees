@@ -72,13 +72,22 @@ export const employeeSlice = createSlice({
         employeeFound.name = name;
       }
     },
-    addEmployee: (state, action: PayloadAction<Data>)=>{
-      state.push(action.payload)
-    }
+    addEmployee: (state, action: PayloadAction<Data>) => {
+      state.push(action.payload);
+    },
+    deleteEmployee: (state, action: PayloadAction<Data>) => {
+      const employeeFound = state.find(
+        (employee) => employee.id === action.payload.id
+      );
+      if (employeeFound) {
+        state.splice(state.indexOf(employeeFound), 1);
+      }
+    },
   },
 });
 
-export const { dragEmployee, editingEmployee, addEmployee } = employeeSlice.actions;
+export const { dragEmployee, editingEmployee, addEmployee, deleteEmployee } =
+  employeeSlice.actions;
 
 export const selectEmployee = (state: RootState) => state.employees;
 
