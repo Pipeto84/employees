@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/EditEmployee.css";
+import "../styles/FormEmployee.css";
 import { Data } from "../interfaces/index";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { useParams, useNavigate } from "react-router-dom";
