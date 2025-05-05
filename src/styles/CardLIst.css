@@ -12,7 +12,7 @@
 .card-list > p {
   font-weight: bold;
   font-size: 1rem;
-  cursor: initial;
+  cursor: not-allowed;
 }
 .buttonsList {
   display: flex;
